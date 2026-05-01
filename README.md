@@ -7,7 +7,7 @@ El objetivo es aprender programación y crear pequeñas aplicaciones paso a paso
 
 ## 📌 Descripción
 
-Este proyecto contiene un programa básico en Python (`p1.py`) como prueba inicial.
+Este proyecto contiene un programa básico en Python (`p1.py`) como prueba inicial.Es una simple calculadora
 
 ---
 
