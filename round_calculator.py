@@ -1,8 +1,9 @@
 import tkinter as tk
 import math
 
-ROJO = "#AA151B"
-AMARILLO = "#F1BF00"
+VERDE_OSCURO = "#1B5E20"
+VERDE = "#2E7D32"
+VERDE_CLARO = "#A5D6A7"
 NEGRO = "#1C1C1C"
 BLANCO = "#FFFFFF"
 
@@ -47,32 +48,30 @@ def calcular():
 
 
 ventana = tk.Tk()
-ventana.title("Calculadora Científica - España")
+ventana.title("Calculadora Científica Verde")
 ventana.geometry("520x700")
-ventana.config(bg=ROJO)
+ventana.config(bg=VERDE_OSCURO)
 
-# Franja roja superior
-encabezado = tk.Frame(ventana, bg=ROJO)
+encabezado = tk.Frame(ventana, bg=VERDE_OSCURO)
 encabezado.pack(fill="x")
 
 tk.Label(
     encabezado,
     text="Calculadora Científica",
-    bg=ROJO,
+    bg=VERDE_OSCURO,
     fg=BLANCO,
     font=("Arial", 24, "bold"),
 ).pack(pady=(12, 4))
 
 tk.Label(
     encabezado,
-    text="Colores de la bandera de España",
-    bg=ROJO,
-    fg=BLANCO,
+    text="Tema en color verde",
+    bg=VERDE_OSCURO,
+    fg=VERDE_CLARO,
     font=("Arial", 13, "bold"),
 ).pack(pady=(0, 12))
 
-# Franja amarilla central
-cuerpo = tk.Frame(ventana, bg=AMARILLO)
+cuerpo = tk.Frame(ventana, bg=VERDE_CLARO)
 cuerpo.pack(fill="both", expand=True, padx=16, pady=16)
 
 entrada = tk.Entry(
@@ -85,7 +84,7 @@ entrada = tk.Entry(
 )
 entrada.pack(padx=12, pady=16, fill="x", ipady=14)
 
-panel_botones = tk.Frame(cuerpo, bg=AMARILLO)
+panel_botones = tk.Frame(cuerpo, bg=VERDE_CLARO)
 panel_botones.pack(padx=12, pady=(0, 12), fill="both", expand=True)
 
 botones = [
@@ -117,24 +116,23 @@ for fila_idx, fila in enumerate(botones):
             panel_botones,
             text=texto,
             font=("Arial", 14, "bold"),
-            bg=ROJO,
+            bg=VERDE,
             fg=BLANCO,
-            activebackground="#8E1216",
+            activebackground=VERDE_OSCURO,
             activeforeground=BLANCO,
             relief="flat",
             command=comando_boton(texto),
         )
         boton.grid(row=fila_idx, column=col_idx, sticky="nsew", padx=4, pady=4, ipady=10)
 
-# Botón igual en toda la fila inferior
 igual = tk.Button(
     panel_botones,
     text="=",
     font=("Arial", 16, "bold"),
-    bg=NEGRO,
-    fg=AMARILLO,
-    activebackground="#000000",
-    activeforeground=AMARILLO,
+    bg=VERDE_OSCURO,
+    fg=VERDE_CLARO,
+    activebackground="#0F3D12",
+    activeforeground=VERDE_CLARO,
     relief="flat",
     command=calcular,
 )
